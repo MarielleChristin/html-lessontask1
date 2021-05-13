@@ -64,3 +64,10 @@ color:#ffffff;
 footer {
     text-align: center;
 }
+
+/* Contact page */
+
+input, select, textarea {
+    border-color: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
