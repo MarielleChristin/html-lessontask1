@@ -71,3 +71,20 @@ input, select, textarea {
     border-color: 1px solid #c4c4c4;
     border-radius: 5px;
 }
+
+/* Navigation bar */
+
+ul {
+    padding: 0px;
+}
+nav li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav .active {
+    text-decoration: underline;
+}
