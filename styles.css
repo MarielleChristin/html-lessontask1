@@ -17,13 +17,21 @@ h2,
     font-family: verdana;
 }
 
-.home-header {
+.welcome {
     background-image: url("images/home-header.jpg");
     background-size: cover;
     min-height: 70vh;
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: bottom;
+    position: relative;
+}
+
+.welcome__content {
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    left: 100px;
 }
 
 .our-guitars {
@@ -70,7 +78,9 @@ footer {
 
 /* Contact page */
 
-input, select, textarea {
+input, 
+select, 
+textarea {
     border-color: 1px solid #c4c4c4;
     border-radius: 5px;
 }
