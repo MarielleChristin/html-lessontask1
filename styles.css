@@ -28,7 +28,7 @@ h2,
     background-size: cover;
     min-height: 70vh;
     background-repeat: no-repeat;
-    background-position-x: right;
+    background-position-x: center;
     background-position-y: bottom;
     position: relative;
 }
@@ -36,14 +36,16 @@ h2,
 .welcome__content {
     position: absolute;
     text-align: center;
-    top: 100px;
-    left: 100px;
+    top: 50px;
+    left: 50px;
+    transform: translateX(-50%);
 }
 
 .selling-points,
 .reviews__content {
     max-width: 1000px;
     display: flex;
+    flex-direction: column;
 }
 
 .selling-points {
@@ -73,7 +75,7 @@ color:#ffffff;
     background-color:#bb0000;
     color:#ffffff;
     text-decoration: none;
-    padding: 10px 80px;
+    padding: 10px 40px;
     border-radius: 5px;
 }
 
@@ -164,7 +166,7 @@ nav {
 }
 
 .reviews__content div {
-    margin: 50px;
+    margin: 20px;
 }
 
 .review-pic {
@@ -179,7 +181,7 @@ nav {
 
 .featured {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     max-width: 1000px;
     margin: 50px auto;
     grid-gap: 10px;
@@ -252,3 +254,33 @@ textarea {
 .products img {
     width: 100%;
 }
+
+@media (min-width:600px) {
+    .featured {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .reviews__content,
+    .selling-points {
+        flex-direction: row;
+    }
+};
+
+@media (min-width:800px) {
+    .featured {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .reviews__content div {
+        margin:50px;
+    }
+    .welcome {
+        background-position-x: right;
+    }
+    .welcome__content {
+        top: 100px;
+        left: 100px;
+        transform: none;
+    }
+    .cta {
+        padding: 10px 80px;
+    }
+};
