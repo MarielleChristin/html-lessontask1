@@ -5,6 +5,10 @@
 
 body {
     font-family: "Roboto";
+    margin: 0px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 h1, 
@@ -16,6 +20,8 @@ h2,
 .product-list h2 {
     font-family: verdana;
 }
+
+/* homepage */
 
 .welcome {
     background-image: url("images/home-header.jpg");
@@ -34,7 +40,22 @@ h2,
     left: 100px;
 }
 
-.our-guitars {
+.selling-points,
+.reviews__content {
+    max-width: 1000px;
+    display: flex;
+}
+
+.selling-points {
+    margin: 50px auto;
+}
+
+.selling-points > *,
+.reviews__content > * {
+    flex: 1;
+}
+
+.selling-points__images {
     border-radius: 100px;
 }
 
@@ -56,33 +77,50 @@ color:#ffffff;
     border-radius: 5px;
 }
 
-.reviews {
-    background-color: #ebebeb;
+.cta-small {
+    padding: 8px 30px;
+    font-size: 0.8em;
+    grid-column: 2;
+    grid-row: 2/4;
+    min-width: 51.2px;
+    text-align: center;
+    margin-top: 5px;
 }
 
-.review-pic {
-    border-radius: 50%;
-}
-
-.featured--products {
+.products {
     background-color: #fbfbfb;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
 } 
+
+.products img {
+    grid-column: -1/1;
+}
+
+.products h2,
+.products h3, 
+.products p {
+    grid-column: 1;
+    font-size: 0.9em;
+    margin: 5px;
+}
 
 .cta-sale {
     background-color: #127300;
 }
 
-footer {
-    text-align: center;
+.product--sale {
+    display: flex;
 }
 
-/* Contact page */
+.old-price {
+    text-decoration: line-through;
+}
 
-input, 
-select, 
-textarea {
-    border-color: 1px solid #c4c4c4;
-    border-radius: 5px;
+footer {
+    text-align: center;
+    padding: 20px;
 }
 
 /* Navigation bar */
@@ -101,4 +139,116 @@ a {
 
 nav .active {
     text-decoration: underline;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    margin-left: 25px;
+}
+
+/* Reviews */
+
+.reviews {
+    background-color: #ebebeb;
+    text-align: center;
+    padding: 50px;
+}
+
+.reviews__content {
+    text-align: left;
+    margin: auto;
+}
+
+.reviews__content div {
+    margin: 50px;
+}
+
+.review-pic {
+    border-radius: 50%;
+    width: 80px;
+    float: right;
+}
+
+.reviews__name {
+    display: block;
+}
+
+.featured {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1000px;
+    margin: 50px auto;
+    grid-gap: 10px;
+}
+
+.featured h2 {
+    grid-column: -1/1;
+}
+
+.featured img {
+    width: 100%;
+}
+
+/* Contact page */
+
+input, 
+select, 
+textarea {
+    border-color: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+/* Product page*/
+
+.product-spesific {
+    display: flex;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.product-spesific > * {
+    flex: 1;
+}
+
+.product-spesific_details {
+    padding: 0px 30px;
+}
+
+.product-spesific_details a {
+    display: block;
+    width: 95.767px;
+    margin: auto;
+}
+
+.product-image {
+    width: 100%;
+}
+
+.product-image_thumbnails {
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+/* Guitars page */
+
+.guitars {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.products img {
+    width: 100%;
 }
