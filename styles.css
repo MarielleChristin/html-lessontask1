@@ -6,7 +6,7 @@
 body {
     font-family: "Roboto";
     margin: 0px;
-    display: grid;
+    display: grid; 
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
 }
@@ -77,6 +77,26 @@ color:#ffffff;
     text-decoration: none;
     padding: 10px 40px;
     border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.cta:before {
+    content:"";
+    padding: 10px;
+    background: white;
+    transform: rotate(45deg);
+    position: absolute;
+    height: 100px;
+    top: -40px;
+    left: -100px;
+    transition: left ease-in-out 1s;
+    opacity: 0.3;
+}
+
+.cta:hover:before {
+    left: 110%;
 }
 
 .cta-small {
@@ -243,6 +263,19 @@ textarea {
 .guitars {
     max-width: 1000px;
     margin: auto;
+}
+
+.guitars .products {
+    animation-name: show-guitars;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show-guitars{
+    0% {opacity: 0;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1.0;}
 }
 
 .product-list {
